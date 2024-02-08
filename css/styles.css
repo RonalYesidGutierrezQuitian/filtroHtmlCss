@@ -745,6 +745,90 @@ main .card .card-link div:hover {
     background: var(--grey);
 }
 
+
+main .info-front {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    opacity: 0;
+}
+
+/* main .info-front .card {
+    padding: 10px;
+    border-radius: 10px;
+} */
+
+
+input{
+    display: none;
+}
+
+label{
+    cursor: pointer;
+}
+
+
+.info-front{
+    opacity: 0;
+    visibility: 0;
+}
+
+
+.info {
+    height: 100%;
+    width: 100%;
+}   
+
+
+#ver-producto:checked ~ .info-data{
+    opacity: 0.5;
+    visibility: 0.5;
+}
+
+#ver-producto:checked ~ .info-front{
+    opacity: 1;
+    visibility: 1;
+    top: 3px;%;
+    right: 25%;
+    position: absolute;
+
+}
+
+.image {
+    background-image: url("../img/abrigo1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 50%;
+    border-radius: 14%;
+    border: solid #d6d1c3bd;
+}
+
+.info-front {
+    display: grid;
+    visibility: visible;
+    border: solid #d6d1c3bd;
+    background-color: var(--grey);
+    border-radius: 9%;
+    height: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+.breadcrumbs-front{
+    width: 10%;
+    border: solid #429e81;
+    background-color: #429e81;
+    border-radius: 10%;
+}
+
+.breadcrumbs-front a {
+    color: #fff;
+}
+
+
+
 /* MAIN */
 /* CONTENT */
 
@@ -753,7 +837,7 @@ main .card .card-link div:hover {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 779px) {
     #content {
         position: relative;
         width: calc(100% - 60px);
@@ -764,4 +848,20 @@ main .card .card-link div:hover {
     nav .divider {
         display: none;
     }
+
+    main {
+        position: relative;
+        left: -30%;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .info-front {
+        height: 80%;
+        width: 80%;
+        position: relative;
+    }
+
 }
